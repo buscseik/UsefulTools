@@ -9,6 +9,7 @@ export-modulemember -function Get-UpTimeStatistics
 export-modulemember -function Set-AlwaysOnTop
 export-modulemember -function Set-QuickEdit
 export-modulemember -function Watch
+export-modulemember -function Set-TimeStampPrompt
 
 
 

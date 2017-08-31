@@ -1,4 +1,44 @@
-﻿function DateEcho($Var)
+﻿function Set-TimeStampPrompt        
+{ 
+<#
+   
+.DESCRIPTION
+   This function will add time stamp to current console prompt.
+
+.EXAMPLE
+   DateEcho "This message need a timesamp"
+   26.01.2017-22:24:08> This message need a timesamp
+
+.EXAMPLE
+    Set-TimeStampPrompt   
+
+    PS  [08/31/2017 12:20:09] C:\Users\>
+
+.EXAMPLE
+    Set-TimeStampPrompt -disable   
+
+    PS  C:\Users\>
+
+#>
+    param([switch]$disable=$false)
+    if(-not $disable)
+    {   
+        function global:Prompt {        
+            "PS "+ " [$(Get-Date)] " + $(get-location) +"> "            
+        }
+    }
+    else
+    {
+        function global:Prompt {
+            "PS $($executionContext.SessionState.Path.CurrentLocation)$('>' * ($nestedPromptLevel + 1)) ";
+            # .Link
+            # https://go.microsoft.com/fwlink/?LinkID=225750
+            # .ExternalHelp System.Management.Automation.dll-help.xml
+        }
+    }
+}
+
+function DateEcho($Var)
 {
 <#
    

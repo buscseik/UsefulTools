@@ -2,7 +2,7 @@
 RootModule="UsefulTools.psm1"
 GUID="488127aa-8772-4319-9a62-31c726c09d1a"
 Author="Krisztian Buscsei"
-ModuleVersion="1.1"
+ModuleVersion="1.2"
 Description="Set of useful tools. E.g.: DateEcho, Set-QuickEdit, Watch."
 
 # Private data to pass to the module specified in RootModule/ModuleToProcess
