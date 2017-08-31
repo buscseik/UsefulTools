@@ -5,7 +5,7 @@ Set of useful tools for PowerShell.
 * Watch: Simplified alternative of Linux watch.
 * Get-UpTimeStatistics: Return with system up-time statistic based on event logs.
 * Set-AlwaysOnTop: Set AlwasyOnTop mode of the current console window.
-
+* Set-TimeStampPrompt: Allows user to add time stamp to console prompt.
 
 ### Installation
 ```
