@@ -69,6 +69,20 @@ function DateEcho($Var)
     
 
 }
+function Lock-WorkStation
+{
+<#
+   
+.DESCRIPTION
+   This function will lock the screen on workstation
+
+.EXAMPLE
+    Lock-WorkStation
+   
+#>
+
+    rundll32.exe user32.dll, LockWorkStation
+}
 
 function Get-UpTimeStatistics
 {
